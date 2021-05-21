@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Home from './pages/Home';
+import Api from './pages/Api';
 
-function App() {
+const showHome = () => {
+  if (window.location.pathname === "/accueil") {
+    return <Home></Home>
+  }
+};
+
+const showApi = () => {
+  if (window.location.pathname === "/api") {
+    return <Api></Api>
+  };
+}
+
+export default () => {
+  return (
+    <div className="ui container">
+      {showHome()}
+      {showApi()}
+    </div>
+  )
+}
+
+/*function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+          Projet React Soutenance
       </header>
     </div>
   );
 }
 
-export default App;
+export default App;*/
