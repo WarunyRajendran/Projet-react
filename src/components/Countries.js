@@ -8,7 +8,7 @@ const Countries = () => {
     useEffect(() => {
         axios
         .get(
-        "https://restcountries.eu/rest/v2/all?fields=name;population;region:capital;flag"
+        "https://restcountries.eu/rest/v2/all?fields=name;population;region;capital;flag"
         )
         // .then((res) => console.log(res.data))
         .then((res) => setData(res.data));
@@ -26,7 +26,7 @@ const Countries = () => {
             <p>Liste déroulante de chaque partie de l'api</p>
             <ul>
                 {data.map((country) => (
-                    <ListCountries country={country}/>
+                    <ListCountries country={country} key={country.name}/>
                     // <li key={country.name}>{country.name}</li>
                 ))}
             </ul>

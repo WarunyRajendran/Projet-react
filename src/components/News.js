@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import ListNews from './ListNews';
 
 const News = () => {
     let [news, setNews] = useState([]);
@@ -20,8 +21,9 @@ const News = () => {
             <p>Affichage de toutes les News</p>
             <p>Liste déroulante de chaque partie de l'api</p>
             <ul>
-                {news.map((info) => (
-                    <li key={info.id}>{info.name}</li>
+                {news.map((infonews) => (
+                    <ListNews infonews={infonews} key={infonews.id}/>
+                    // <li key={infonews.id}>{infonews.name}</li>
                 ))}
             </ul>
         </>
