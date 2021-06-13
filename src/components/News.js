@@ -15,17 +15,16 @@ const News = () => {
         });
 
     return (
-        // <>
-        //     <h1>Page News</h1>
-        //     <p>Affichage de toutes les News</p>
-        //     <p>Liste déroulante de chaque partie de l'api</p>
-        //     {/* //     <p>{news.country}</p> */}
-        // </>
-        <ul>
-            {news.map((info) => (
-                <li key={info.id}>{info.name}</li>
-            ))}
-        </ul>
+        <>
+            <h1>Page News</h1>
+            <p>Affichage de toutes les News</p>
+            <p>Liste déroulante de chaque partie de l'api</p>
+            <ul>
+                {news.map((info) => (
+                    <li key={info.id}>{info.name}</li>
+                ))}
+            </ul>
+        </>
     );
 };
 

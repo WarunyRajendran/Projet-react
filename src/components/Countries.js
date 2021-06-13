@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import ListCountries from './ListCountries';
 
 const Countries = () => {
     let [data, setData] = useState([]);
@@ -25,7 +26,8 @@ const Countries = () => {
             <p>Liste déroulante de chaque partie de l'api</p>
             <ul>
                 {data.map((country) => (
-                    <li key={country.name}>{country.name}</li>
+                    <ListCountries country={country}/>
+                    // <li key={country.name}>{country.name}</li>
                 ))}
             </ul>
         </>
