@@ -1,24 +1,39 @@
 import React from 'react';
+import Header from './components/Header';
+import Route from './components/Route';
 import Home from './pages/Home';
-import Api from './pages/Api';
+import Countries from './components/Countries';
+import News from './components/News';
+import Fuison from './pages/Fusion';
 
-const showHome = () => {
-  if (window.location.pathname === "/accueil") {
-    return <Home></Home>
-  }
-};
+// const showHome = () => {
+//   if (window.location.pathname === "/accueil") {
+//     return <Home></Home>
+//   }
+// };
 
-const showApi = () => {
-  if (window.location.pathname === "/api") {
-    return <Api></Api>
-  };
-}
+// const showPokemon = () => {
+//   if (window.location.pathname === "/api") {
+//     return <Api></Api>
+//   };
+// }
 
 export default () => {
   return (
     <div className="ui container">
-      {showHome()}
-      {showApi()}
+      <Header />
+      <Route path="/accueil">
+        <Home />
+      </Route>
+      <Route path="/api-countries">
+        <Countries />
+      </Route>
+      <Route path="/api-news">
+        <News />
+      </Route>
+      <Route path="/fusion">
+        <Fuison />
+      </Route>
     </div>
   )
 }
