@@ -35,6 +35,3 @@ const Countries = () => {
 };
 
 export default Countries;
-
-
-// https://www.superheroapi.com/api.php/10208691394679289/70/  api superhero
