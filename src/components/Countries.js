@@ -12,9 +12,7 @@ const Countries = () => {
         // .then((res) => console.log(res.data))
         .then((res) => setData(res.data));
         console.log(data);
-        // setPokemon(res.data.results))
-    }); // Dans les crochets on met un callBack,
-            // si il y en a pas va pas rejouer le useEffect
+    });
     
     // for (var i = 0; i <= 30; i++) {
     //     useEffect(i)
@@ -25,9 +23,6 @@ const Countries = () => {
             <h1>Page Pays</h1>
             <p>Affichage de tous les drapeaux</p>
             <p>Liste déroulante de chaque partie de l'api</p>
-            {/* <img src={pokemon.image.url} alt="hero"/> */}
-            {/* <p>{pokemon.name}</p> */}
-            {/* <p>{pokemon.appearance.gender}</p> */}
             <ul>
                 {data.map((country) => (
                     <li key={country.name}>{country.name}</li>
