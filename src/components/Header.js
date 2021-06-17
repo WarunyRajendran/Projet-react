@@ -12,8 +12,8 @@ const Header = () => {
             <a href="/api-news" className="item">
                 News
             </a>
-            <a href="/fusion" className="item">
-                Fusion
+            <a href="/correspondance" className="item">
+                Correspondance
             </a>
         </div>
     );

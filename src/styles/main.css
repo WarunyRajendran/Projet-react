@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
+
 .menu {
     display: flex;
     justify-content: center;
@@ -30,16 +32,71 @@ body {
     background-color: #f5f5f5;
 }
 
-/* CSS Countries */
+/* ----- CSS Countries ----- */
 
-.listCountries {
+/* .listCountries {
     list-style: none;
-    flex-wrap: wrap;
+    background-color: red;
+    width: 15vw;
+    height: 15vw;
+    margin: 5vh;
+    border: 1px solid #000;
+} */
+
+/* .data-countries {
     display: flex;
+    flex-direction: column;
+} */
+
+/* .listCountries img {
+    object-fit: cover;
+    height: 100px;
+    width: 160px;
+    border-radius: 5px;
+} */
+
+/* .data-countries-container {
+    display: flex;
+    flex-direction: row;
+} */
+
+/* .data-countries-container li {
+    list-style: none;
+} */
+
+
+/* .data-countries-container {
+    display: flex;
+} */
+
+h1 {
+    text-align: center;
+    font-family: 'Viaoda Libre', cursive;
 }
 
-.data-countries-container ul {
-    list-style: none;
+.data-countries-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.data-countries {
+    /* border: 1px solid #000; */
+    margin: 15px;
+}
+
+.data-countries img {
+    /* object-fit: cover; */
+    height: 100px; /* changer taille img */
+    width: 160px;
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.data-countries p {
+    text-align: center;
+    font-weight: bold;
 }
 
 /*
@@ -48,8 +105,56 @@ ul {
     justify-content: space-around;
 } */
 
-.data-countries-container img {
-    object-fit: cover;
-    height: 100px;
-    width: 160px;
+
+/* ----- CSS News ----- */
+
+.news-h1-image {
+    display: flex;
+    justify-content: center;
 }
+
+.news-image {
+    width: 150px;
+    height: 100px;
+}
+
+.data-news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* align-items: center; */
+    /* background-color: red; */
+    /* border: 1px solid #0e2750; */
+    /* margin: 5%; */
+}
+
+.data-news {
+    width: 50vw;
+    margin: 5vh;
+    border: 1px solid #0e2750;
+    background-image: url('../images/wallpapernews.png');
+}
+
+.data-news h2 {
+    text-align: center;
+}
+
+.description-news {
+    /* font-family: 'Viaoda Libre', cursive; */
+    /* font-weight: bold; */
+    /* font-size: 20px; */
+}
+
+/* .container__profile__text {
+    background-color: red;
+    @include bottom();
+ }
+
+.container__profile__text h2 {
+    color: #334454;
+   font-size: 1.2rem;
+} */
+/* 
+.list-news {
+    list-style: none;
+} */

@@ -4,7 +4,7 @@ import Route from './components/Route';
 import Home from './pages/Home';
 import Countries from './components/Countries';
 import News from './components/News';
-import Fuison from './pages/Fusion';
+import Correspondance from './pages/Correspondance';
 
 // const showHome = () => {
 //   if (window.location.pathname === "/accueil") {
@@ -31,8 +31,8 @@ export default () => {
       <Route path="/api-news">
         <News />
       </Route>
-      <Route path="/fusion">
-        <Fuison />
+      <Route path="/correspondance">
+        <Correspondance />
       </Route>
     </div>
   )
