@@ -3,34 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
 
- /* .menu {
-    display: flex;
-    justify-content: center; */
-    /* align-items: center; */
-    /* width: 100%;
-    margin: 0 auto;
-    list-style: none;  */
-    /* background-color: #8B8B8B; #306dd0; */
-/* }
-
-.menu a {
-    width: 140px;
-    height: 35px;
-    text-align: center;
-    font-size: 22px;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.menu a:hover{
-    color: #48ADEA;
-}
-
-menu .item {
-    align-items: center;
-}  */
-
 body {
     background-color: #f5f5f5;
 }
@@ -45,7 +17,6 @@ h1 {
 /* ----- CSS Home ----- */
 
 .home-presentation {
-    /* font-family: 'Inconsolata', monospace; */
     font-family: 'Bitter', serif;
     font-size: 20px;
 }
@@ -59,16 +30,11 @@ h1 {
     display: flex;
     justify-content: space-around;
     margin-top: 6vh;
-    /* width: 100vw; */
 }
 
 .les-apis h2 {
     text-align: center;
 }
-
-/* .detail-api {
-    display: flex;
-} */
 
 .les-apis button{
     background-color: #3f51b5;
@@ -117,29 +83,14 @@ h1 {
     border-radius: 1vh;
 }
 
-/* .presentation-api-countries img {
-    height: 80px; changer taille img
-    width: 140px;
-}*/
-
 .presentation-api-countries button {
-    margin-top: 8vh;
+    margin-top: 6vh;
 }
 
 .presentation-api-news {
     box-shadow: 2px 2px 5px #474747;
     border-radius: 1vh;
 }
-
-/* .presentation-api-countries h2 {
-    margin-bottom: 5vh;
-} */
-
-/* .presentation-api-news img {
-    /* margin-top: 2vh; */
-    /* height: 40px; changer taille img
-    width: 100px;
-} */
 
 .presentation-api-news button {
     margin-top: 5vh;
@@ -154,13 +105,11 @@ h1 {
 }
 
 .data-countries {
-    /* border: 1px solid #000; */
     margin: 20px;
 }
 
 .data-countries img {
-    /* object-fit: cover; */
-    height: 100px; /* changer taille img */
+    height: 100px;
     width: 160px;
     border-radius: 10px;
     display: block;
@@ -171,14 +120,7 @@ h1 {
 .data-countries p {
     text-align: center;
     font-weight: bold;
-    /* font-family: 'Timmana', sans-serif; */
 }
-
-/*
-ul {
-    display: flex;
-    justify-content: space-around;
-} */
 
 /* ----- CC Region Countries ----- */
 
@@ -186,7 +128,6 @@ ul {
     color: grey;
     font-style: italic;
 }
-
 
 /* ----- CSS News ----- */
 
@@ -205,10 +146,6 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    /* align-items: center; */
-    /* background-color: red; */
-    /* border: 1px solid #0e2750; */
-    /* margin: 5%; */
 }
 
 .data-news {
@@ -216,26 +153,16 @@ ul {
     margin: 5vh;
     border-radius: 10px;
     box-shadow: 2px 2px 5px #474747;
-    /* border: 1px solid #0e2750; */
     background-color: #F1F1F1;
     padding: 2vh 2vh 0 2vh;
-    /* background-image: url('../images/wallpapernews.png'); */
-    /* ECECEC */
 }
 
 .data-news h2 {
     color: black;
     text-align: center;
-    /* background: linear-gradient(#929292, 50%, white); */
-    /* height: 5vh; */
-    /* width: 20vw; */
-    /* margin: 0 auto; */
-    /* linear-gradient(#929292, 50%, white) */
-    /* #FF3D3D ou #FF5151 */
 }
 
 .data-news-details p {
-    /* font-family: 'Timmana', sans-serif; */
     font-family: 'Inconsolata', monospace;
 }
 
@@ -262,18 +189,10 @@ ul {
     height: 70px;
 }
 
-/* .news-title {
-    height: 20vh;
-} */
-
-
 /* ----- CSS Headline News ----- */
 
 .news-headline {
     font-family: 'Inconsolata', monospace;
-    /* display: flex;
-    flex-wrap: wrap; */
-    /* justify-content: space-around; */
     width: 40vw;
     margin: 5vh;
     border-radius: 10px;
@@ -321,10 +240,8 @@ ul {
 }
 
 .world-correspondance {
-    /* background-size: cover; */
     width: 300px;
     height: 200px;
-    /* margin-left: 90vh; */
 }
 
 .container-correspondance {
@@ -338,31 +255,22 @@ ul {
     margin: 5vh;
     border-radius: 10px;
     box-shadow: 2px 2px 5px #474747;
-    /* border: 1px solid #0e2750; */
     background-color: #F1F1F1;
     padding: 2vh 2vh 2vh 2vh;
-    /* background-image: url('../images/wallpapernews.png'); */
-    /* ECECEC */
 }
 
 .data-news-correspondance h2 {
     color: white;
     text-align: center;
     background-color: #929292;
-    /* #FF3D3D ou #FF5151 */
 }
 
 .data-news-correspondance img {
     float: right;
 }
 
-/* .correspondance-countries { */
-    /* border: 1px solid #000; */
-    /* background-color: ; */
-/* } */
-
 .correspondance-countries img {
-    height: 160px; /* changer taille img */
+    height: 160px;
     width: 240px;
     border-radius: 10px;
 }

@@ -6,9 +6,7 @@
 }
 
 * {
-    /* margin: 0px; */
     padding: 0px;
-    /* font-family: Montserrat, sans-serif; */
 }
 
 nav {
@@ -47,8 +45,6 @@ nav > ul > li > a {
 li a {
     text-decoration: none;
     color: black;
-    /* font-weight: bold; */
-    /* font-family: 'Viaoda Libre', cursive; */
     font-family: 'Bitter', serif;
 }
   

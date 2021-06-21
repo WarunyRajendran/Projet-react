@@ -1,6 +1,4 @@
 import React from 'react';
-import ImageNews from '../images/news.png';
-import World from '../images/world.png';
 
 const Home = () => {
     return (
@@ -10,19 +8,16 @@ const Home = () => {
                 <p className="title-presentation">Pour ce projet react, j'ai décidé d'utiliser les deux APIs suivantes.</p>        
                 <div className="les-apis">
                     <div className="presentation-api-countries">
-                        {/* <img src={World} alt="news"></img> */}
-                        {/* <div className="detail-api"> */}
-                            <h2>REST Countries</h2>   
-                        {/* </div> */}
-                        <p>Cette api va retourner tous les drapeaux du monde. Cette api ne necéssite pas de clé api. Il existe plusieurs urls pour filtrer nos requêtes.
+                            <h2>REST Countries</h2>
+                        <p>Cette api va retourner tous les drapeaux du monde. Elle ne necéssite pas de clé api. Il existe plusieurs urls pour filtrer nos requêtes.
                             Il est possible d'afficher les drapeaux en fonction de la langue, du continent, de la capital, etc. 
                             Dans ce projet, cette api est divisée en 3 parties. 
                         </p>
                         <ul>
-                            <li>En première partie, la page "Countries" va nous afficher la liste de tous les drapeaux.</li>
+                            <li>En première partie, la page "Countries" qui va afficher la liste de tous les drapeaux.</li>
                         </ul>
                         
-                        <p>Dans les deux parties suivantes, l'url est filtré en fonction de ce que l'on souhaite retourner.</p>
+                        <p>Dans les deux parties suivantes, l'url est filtrée en fonction de ce que l'on souhaite retourner.</p>
                         <ul>
                             <li>En deuxième partie, la page "Pays d'Amérique" va uniquement retourner les pays d'Amérique.</li>
                             <li>En troisième partie, la page "Pays selon la langue", va afficher les pays selon la langue choisit. Ici, l'anglais.</li>
@@ -31,22 +26,19 @@ const Home = () => {
                     </div>
                 
                     <div className="presentation-api-news">
-                        {/* <img src={ImageNews} alt="news"></img> */}
-                        {/* <div className="detail-api"> */}
                             <h2>NewsAPI</h2>
-                        {/* </div> */}
                         <p>Cette api va afficher toutes les news du monde provenant de différentes sources. Celle-ci necéssite une clé api. 
                             Pour cela, il faut s'enregistrer pour ensuite accéder aux ressources. Cependant, le nombre de requête
                             est limité à 100 requêtes par jour. 
-                            Il est possible de filtrer les demandes. Nous pouvons retourner les news d'un sujet précis (ex: le bitcoin), 
+                            Il est possible de filtrer les requêtes. Nous pouvons retourner les news d'un sujet précis (ex: le bitcoin), 
                             les grands titres d'un pays, etc.
                             Dans ce projet, cette api est divisée en 3 parties.
                         </p>
                         <ul>
-                            <li>En première partie, la page "News", va afficher la liste de toutes les news du monde 
+                            <li>En première partie, la page "News", qui va afficher la liste de toutes les news du monde 
                             provenant de toutes les sources.</li>
                         </ul>    
-                        <p>Dans les deux parties suivantes, l'url est filtré en fonction de ce que l'on souhaite retourner.</p>
+                        <p>Dans les deux parties suivantes, l'url est filtrée en fonction de ce que l'on souhaite retourner.</p>
                         <ul>
                             <li>En deuxième partie, la page "Grands titre aux USA", va afficher les meilleurs news des USA.</li>
                             <li>En troisème partie, la page "Business News" retourne les news de la catégorie business.</li>
@@ -54,12 +46,6 @@ const Home = () => {
                         <button><a href="https://newsapi.org/" target="blank">Documentation NewsAPI</a></button>
                     </div>
                 </div>
-
-                {/* <div className="presentation-correspondance">
-                    <h2>Correspondance</h2>
-                    <p>Une fois utilisé les APIs séparement, il serait temps de les faire correspondre. La page "Correspondance"
-                    va retourner une news aléatoirement et afficher son pays de source.</p>
-                </div> */}
             </div>
         </>
     );

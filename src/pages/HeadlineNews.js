@@ -3,16 +3,11 @@ import BookNews from '../images/book.png';
 
 const HeadlineNews = () => {
     let [headline, setHeadline] = useState([]);
-    // const [once, setOnce] = useState(true);
     
     useEffect(() => {
-        // if(once) {
         fetch("https://newsapi.org/v2/top-headlines?country=us&apiKey=8fa89dcad1fb46118e537fcd03608ebf")
         .then(res => res.json())
         .then((res) => setHeadline(res.articles));
-        // .then(res => console.log(res.articles));
-        // setOnce(false);
-        // }
     })
 
     return (
@@ -25,7 +20,6 @@ const HeadlineNews = () => {
                     <div className="news-headline-details">
                         <p className="news-headline-title">{headline.title}</p>
                         <p className="news-headline-description">{headline.description}</p>
-                        {/* <p className="news-headline-site">{headline.url}</p> */}
                         <a href={headline.url} className="news-link" target="_blank" name="link"><img src={BookNews} name="link" className="news-url-image" alt="news-url"/></a>
                     </div>
                 </div>

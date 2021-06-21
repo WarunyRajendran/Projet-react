@@ -3,16 +3,11 @@ import BookNews from '../images/book.png';
 
 const CategorieNews = () => {
     let [categorie, setCategorie] = useState([]);
-    // const [once, setOnce] = useState(true);
     
     useEffect(() => {
-        // if(once) {
         fetch("https://newsapi.org/v2/sources?category=business&apiKey=8fa89dcad1fb46118e537fcd03608ebf")
         .then(res => res.json())
         .then((res) => setCategorie(res.sources));
-        // .then(res => console.log(res.sources));
-        // setOnce(false);
-        // }
     })
 
     return (

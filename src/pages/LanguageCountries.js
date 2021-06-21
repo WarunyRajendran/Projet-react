@@ -2,17 +2,11 @@ import React, { useEffect, useState } from 'react';
 
 const LanguageCountries = () => {
     let [language, setLanguage] = useState([]);
-    const [once, setOnce] = useState(true);
-    // let randomRegion = Math.floor(Math.random() * 5);
     
     useEffect(() => {
-        // if(once) {
         fetch("https://restcountries.eu/rest/v2/lang/en")
         .then(res => res.json())
         .then((res) => setLanguage(res));
-        // .then(res => console.log(res));
-        // setOnce(false);
-        // }
     })
 
     return (

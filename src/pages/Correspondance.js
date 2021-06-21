@@ -2,25 +2,16 @@ import React, { useEffect, useState } from 'react';
 import World from '../images/world.png';
 import ImageNews from '../images/news.png';
 import BookNews from '../images/book.png';
-// import Countries from '../components/Countries';
-// import News from '../components/News';
-// import ListCountries from '../components/ListCountries';
 
 const Correspondance = () => {
     let [countries, setCountries] = useState([]);
     let [news, setNews] = useState([]);
-    let [newslanguage, setNewsLanguage] = useState([]);
-    let [countrylanguage, setCountryLanguage] = useState([]);
+    // let [newslanguage, setNewsLanguage] = useState([]);
+    // let [countrylanguage, setCountryLanguage] = useState([]);
     const [once, setOnce] = useState(true);
     let randomNumber = Math.floor(Math.random() * 100);
     // let stringNews = newslanguage.toString();
-    let stringLanguage = countrylanguage.toString();
-    // let CorrectFlag = toString(news.languages[0].iso639_1);
-    // let CorrectFlag = toString(news.language);
-    // let correspondanceNews = news.country;
-    // const { country } = props;
-    // const { ListCountries } = props;
-    // console.log(country);
+    // let stringLanguage = countrylanguage.toString();
 
     useEffect(() => {
         if(once) {
@@ -70,13 +61,6 @@ const Correspondance = () => {
 
             <div className="container-correspondance">
 
-
-            {/* <div key={news.name} className="correspondance-news">
-                <li>Nom : {news.name}</li>
-                <li>Description : {news.description}</li>
-                <li>Pays :  {news.country}</li>
-                <li>Site :  {news.url}</li>
-            </div> */}
                 <div className="data-news-correspondance" key={news.name}>
                     <h2>{news.name}</h2>
                     <div className="data-news-details">
@@ -99,28 +83,7 @@ const Correspondance = () => {
                 
 
             </div>
-
-            {/* <ul>
-                {data.map((country) => (
-                    <>
-                    <div key={country.name} className="correspondance-news">
-                        <img src={country.flag} alt="flag" />
-                        <li>Pays : {country.name}</li>
-                        <li>Capital : {country.capital}</li>
-                        <li>Pop. {country.population}</li>
-                    </div>
-                   </>
-                ))}
-            </ul> */}
         </>
-            // {/* // <div className="data-countries-container">
-            //     <ul>
-            //         <img src={data.flag} alt="flag" />
-            //         <li>Pays : {data.name}</li>
-            //         <li>Capital : {data.capital}</li>
-            //         <li>Pop. {data.population}</li>
-            //     </ul>
-            // </div> */}
     );
 };
 
