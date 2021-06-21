@@ -15,7 +15,7 @@ const Correspondance = () => {
 
     useEffect(() => {
         if(once) {
-            fetch("https://newsapi.org/v2/sources?apiKey=8fa89dcad1fb46118e537fcd03608ebf")
+            fetch("https://newsapi.org/v2/sources?apiKey=f057713f0efa4151a7a41b9b1af2022e")
             .then(res => res.json())
             .then((res) => {
                 // setNewsLanguage(res.sources)
