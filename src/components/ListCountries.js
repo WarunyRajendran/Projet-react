@@ -4,18 +4,17 @@ import React from "react";
 
 const ListCountries = (props) => {
     const { country } = props;
+    // console.log(country.languages[0]);
     // console.log(country);
     return (
         <>
             {/* <li className="listcountries" key={country.name}>{country.name}</li> */}
             {/* <li className="listCountries"> */}
             <div className="data-countries">
-                {/* <ul> */}
-                    <img src={country.flag} alt="flag" />
-                    <p>{country.name}</p>
-                    {/* <p>Capital : {country.capital}</p> */}
-                    {/* <p>Pop. {country.population}</p> */}
-                {/* </ul> */}
+                <img src={country.flag} alt="flag" />
+                <p>{country.name}</p>
+                <p className="pays-capital">{country.capital}</p>
+                {/* <p>Pop. {country.population}</p> */}
             </div>
             {/* </li> */}
             {/* <ul>

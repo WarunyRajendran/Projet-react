@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import ImageNews from '../images/news.png';
-import FondNews from '../images/wallpapernews.png';
 // import axios from 'axios';
 import ListNews from './ListNews';
 
 const News = () => {
     let [news, setNews] = useState([]);
 
-    // useEffect(() => {
-    //     fetch("https://newsapi.org/v2/sources?apiKey=c779b69affed4efe94a1e48ab6479c62")
-    //     .then(res => res.json())
-    //     // .then(res => console.log(res.sources));
-    //     .then((res) => setNews(res.sources));
-    //     // console.log(news);
-    // })
+    useEffect(() => {
+        fetch("https://newsapi.org/v2/sources?apiKey=8fa89dcad1fb46118e537fcd03608ebf")
+        .then(res => res.json())
+        // .then(res => console.log(res.sources));
+        .then((res) => setNews(res.sources));
+        // console.log(news);
+    })
     
     // useEffect(() => {
     //     axios
@@ -29,14 +28,14 @@ const News = () => {
         <>
             {/* <img src={FondNews} alt="news-fond"></img> */}
             <div className="news-h1-image">
-                <h1>API</h1><img className="news-image" src={ImageNews} alt="news-image" />
+                <img className="news-image" src={ImageNews} alt="news" />
             </div>
             <div className="data-news-container">
-                {/* {news.map((news) => ( */}
-                    {/* <ListNews news={news} key={news.id}/> */}
-                    <ListNews />
-                    {/* <li key={infonews.id}>{infonews.name}</li> */}
-                {/* ))} */}
+                {news.map((news) => (
+                    <ListNews news={news} key={news.id}/>
+                    // {/* <ListNews /> */}
+                    // {/* <li key={infonews.id}>{infonews.name}</li> */}
+                ))}
             </div>
         </>
     );

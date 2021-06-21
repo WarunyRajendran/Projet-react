@@ -1,78 +1,152 @@
 @import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Timmana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
 
-.menu {
+ /* .menu {
     display: flex;
-    justify-content: center;
+    justify-content: center; */
     /* align-items: center; */
-    width: 100%;
+    /* width: 100%;
     margin: 0 auto;
-    list-style: none;
-    background-color: #306dd0;
-}
+    list-style: none;  */
+    /* background-color: #8B8B8B; #306dd0; */
+/* }
 
 .menu a {
     width: 140px;
-    height: 50px;
+    height: 35px;
     text-align: center;
     font-size: 22px;
-    color: white;
+    color: black;
     text-decoration: none;
     font-weight: bold;
 }
 
 .menu a:hover{
-    color: #0e2750;
+    color: #48ADEA;
 }
 
 menu .item {
     align-items: center;
-}
+}  */
 
 body {
     background-color: #f5f5f5;
 }
 
-/* ----- CSS Countries ----- */
-
-/* .listCountries {
-    list-style: none;
-    background-color: red;
-    width: 15vw;
-    height: 15vw;
-    margin: 5vh;
-    border: 1px solid #000;
-} */
-
-/* .data-countries {
-    display: flex;
-    flex-direction: column;
-} */
-
-/* .listCountries img {
-    object-fit: cover;
-    height: 100px;
-    width: 160px;
-    border-radius: 5px;
-} */
-
-/* .data-countries-container {
-    display: flex;
-    flex-direction: row;
-} */
-
-/* .data-countries-container li {
-    list-style: none;
-} */
-
-
-/* .data-countries-container {
-    display: flex;
-} */
-
 h1 {
     text-align: center;
+    margin-bottom: 6vh;
+    margin-top: 3vh;
     font-family: 'Viaoda Libre', cursive;
 }
+
+/* ----- CSS Home ----- */
+
+.home-presentation {
+    /* font-family: 'Inconsolata', monospace; */
+    font-family: 'Bitter', serif;
+    font-size: 20px;
+}
+
+.title-presentation {
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+.les-apis {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 6vh;
+    /* width: 100vw; */
+}
+
+.les-apis h2 {
+    text-align: center;
+}
+
+/* .detail-api {
+    display: flex;
+} */
+
+.les-apis button{
+    background-color: #3f51b5;
+    padding: 10px 15px;
+    border-radius: 5px;
+    outline: 0;
+    text-transform: uppercase;
+    margin: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0px 2px 2px lightgray;
+    transition: ease background-color 250ms;
+    float: right;
+}
+
+.les-apis button:hover {
+    background-color: #283593;
+}
+
+.les-apis button:disabled {
+    cursor: default;
+    opacity: 0.7;
+}
+
+.les-apis a {
+    text-decoration: none;
+    color: white;
+}
+
+.les-apis p {
+    width: 40vw;
+    font-size: 17px;
+    margin: 4vh 2vh 2vh 2vh;
+}
+
+.les-apis li {
+    width: 40vw;
+    font-size: 17px;
+    list-style: none;
+    margin: 2vh;
+    color: #3f51b5;
+    font-weight: bold;
+}
+
+.presentation-api-countries {
+    box-shadow: 2px 2px 5px #474747;
+    border-radius: 1vh;
+}
+
+/* .presentation-api-countries img {
+    height: 80px; changer taille img
+    width: 140px;
+}*/
+
+.presentation-api-countries button {
+    margin-top: 8vh;
+}
+
+.presentation-api-news {
+    box-shadow: 2px 2px 5px #474747;
+    border-radius: 1vh;
+}
+
+/* .presentation-api-countries h2 {
+    margin-bottom: 5vh;
+} */
+
+/* .presentation-api-news img {
+    /* margin-top: 2vh; */
+    /* height: 40px; changer taille img
+    width: 100px;
+} */
+
+.presentation-api-news button {
+    margin-top: 5vh;
+}
+
+
+/* ----- CSS Countries ----- */
 
 .data-countries-container {
     display: flex;
@@ -81,7 +155,7 @@ h1 {
 
 .data-countries {
     /* border: 1px solid #000; */
-    margin: 15px;
+    margin: 20px;
 }
 
 .data-countries img {
@@ -97,6 +171,7 @@ h1 {
 .data-countries p {
     text-align: center;
     font-weight: bold;
+    /* font-family: 'Timmana', sans-serif; */
 }
 
 /*
@@ -105,10 +180,18 @@ ul {
     justify-content: space-around;
 } */
 
+/* ----- CC Region Countries ----- */
+
+.pays-capital {
+    color: grey;
+    font-style: italic;
+}
+
 
 /* ----- CSS News ----- */
 
 .news-h1-image {
+    margin-top: 2vh;
     display: flex;
     justify-content: center;
 }
@@ -129,32 +212,162 @@ ul {
 }
 
 .data-news {
-    width: 50vw;
+    width: 40vw;
     margin: 5vh;
-    border: 1px solid #0e2750;
-    background-image: url('../images/wallpapernews.png');
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #474747;
+    /* border: 1px solid #0e2750; */
+    background-color: #F1F1F1;
+    padding: 2vh 2vh 0 2vh;
+    /* background-image: url('../images/wallpapernews.png'); */
+    /* ECECEC */
 }
 
 .data-news h2 {
+    color: black;
+    text-align: center;
+    /* background: linear-gradient(#929292, 50%, white); */
+    /* height: 5vh; */
+    /* width: 20vw; */
+    /* margin: 0 auto; */
+    /* linear-gradient(#929292, 50%, white) */
+    /* #FF3D3D ou #FF5151 */
+}
+
+.data-news-details p {
+    /* font-family: 'Timmana', sans-serif; */
+    font-family: 'Inconsolata', monospace;
+}
+
+.news-description {
+    font-style: italic;
+    font-size: 20px;
+}
+
+.news-country {
+    font-weight: bold;
+}
+
+.news-site {
+    color: grey;
+    font-weight: bold;
+}
+
+.data-news img {
+    float: right;
+}
+
+.news-link img {
+    width: 70px;
+    height: 70px;
+}
+
+/* .news-title {
+    height: 20vh;
+} */
+
+
+/* ----- CSS Headline News ----- */
+
+.news-headline {
+    font-family: 'Inconsolata', monospace;
+    /* display: flex;
+    flex-wrap: wrap; */
+    /* justify-content: space-around; */
+    width: 40vw;
+    margin: 5vh;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #474747;
+    padding: 2vh 2vh 0 2vh;
+}
+
+.news-headline h2 {
     text-align: center;
 }
 
-.description-news {
-    /* font-family: 'Viaoda Libre', cursive; */
-    /* font-weight: bold; */
-    /* font-size: 20px; */
+.news-headline-title {
+    font-weight: bold;
+    text-align: center;
 }
 
-/* .container__profile__text {
-    background-color: red;
-    @include bottom();
- }
+.news-headline-description {
+    font-style: italic;
+    color: grey;
+    font-size: 20px;
+}
 
-.container__profile__text h2 {
-    color: #334454;
-   font-size: 1.2rem;
-} */
-/* 
-.list-news {
-    list-style: none;
-} */
+.news-headline img {
+    float: right;
+}
+
+/* ----- CSS Categorie News ----- */
+
+.news-category {
+    font-weight: bold;
+}
+
+
+/* ----- CSS Correspondance ----- */
+
+.images-correspondance {
+    display: flex;
+    justify-content: space-around;
+}
+
+.news-correspondance {
+    width: 200px;
+    height: 100px;
+    margin-top: 6vh;
+}
+
+.world-correspondance {
+    /* background-size: cover; */
+    width: 300px;
+    height: 200px;
+    /* margin-left: 90vh; */
+}
+
+.container-correspondance {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.data-news-correspondance {
+    width: 40vw;
+    margin: 5vh;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #474747;
+    /* border: 1px solid #0e2750; */
+    background-color: #F1F1F1;
+    padding: 2vh 2vh 2vh 2vh;
+    /* background-image: url('../images/wallpapernews.png'); */
+    /* ECECEC */
+}
+
+.data-news-correspondance h2 {
+    color: white;
+    text-align: center;
+    background-color: #929292;
+    /* #FF3D3D ou #FF5151 */
+}
+
+.data-news-correspondance img {
+    float: right;
+}
+
+/* .correspondance-countries { */
+    /* border: 1px solid #000; */
+    /* background-color: ; */
+/* } */
+
+.correspondance-countries img {
+    height: 160px; /* changer taille img */
+    width: 240px;
+    border-radius: 10px;
+}
+
+.correspondance-countries p {
+    font-weight: bold;
+    text-align: center;
+}

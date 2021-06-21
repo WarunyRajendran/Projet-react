@@ -1,4 +1,5 @@
 import React from "react";
+import BookNews from '../images/book.png';
 
 const ListNews = (props) => {
     const { news } = props;
@@ -19,9 +20,25 @@ const ListNews = (props) => {
             // </div>
         // </li>
         <>
-        <div className="data-news">
+        <div className="data-news" key={news.name}>
+            <h2>{news.name}</h2>
             <div className="data-news-details">
-                <p className="description-news">Description : Mauris consectetur 
+                <p className="news-description">{news.description}</p>
+                <p className="news-country">Pays : {news.country}</p>
+                <p className="news-site">{news.url}</p>
+                {/* <label name="link">Voir le site</label> */}
+                <a href={news.url} className="news-link" target="_blank" name="link"><img src={BookNews} name="link" className="news-url-image" alt="news-url"/></a>
+            </div>
+
+            {/* <div className="news-title"> */}
+                
+            {/* </div> */}
+        </div>
+
+
+        {/* <div className="data-news">
+            <div className="data-news-details">
+                <p className="news-description">Mauris consectetur 
                     est vitae massa venenatis faucibus. 
                     Praesent congue pulvinar felis in blandit. 
                     Integer felis lectus, accumsan sed orci quis, 
@@ -30,17 +47,16 @@ const ListNews = (props) => {
                     Fusce finibus lobortis sem eget mattis. 
                     Suspendisse a nulla ante. Vestibulum nec 
                     placerat velit</p>
-                <p>Pays :  France</p>
-                <p>Site :  www.google.com</p>
+                <p className="news-country">France</p>
+                <p className="news-site">www.google.com</p>
             </div>
             <h2>Nom de la News</h2>
         </div>
 
 
         <div className="data-news">
-            <h2>Nom de la News</h2>
             <div className="data-news-details">
-                <p className="description-news">Description : Mauris consectetur 
+                <p className="news-description">Mauris consectetur 
                     est vitae massa venenatis faucibus. 
                     Praesent congue pulvinar felis in blandit. 
                     Integer felis lectus, accumsan sed orci quis, 
@@ -49,16 +65,15 @@ const ListNews = (props) => {
                     Fusce finibus lobortis sem eget mattis. 
                     Suspendisse a nulla ante. Vestibulum nec 
                     placerat velit</p>
-                <p>Pays :  France</p>
-                <p>Site :  www.google.com</p>
+                <p className="news-country">France</p>
+                <p className="news-site">www.google.com</p>
             </div>
+            <h2>Nom de la News</h2>
         </div>
 
-
         <div className="data-news">
-            <h2>Nom de la News</h2>
             <div className="data-news-details">
-                <p className="description-news">Description : Mauris consectetur 
+                <p className="news-description">Mauris consectetur 
                     est vitae massa venenatis faucibus. 
                     Praesent congue pulvinar felis in blandit. 
                     Integer felis lectus, accumsan sed orci quis, 
@@ -67,10 +82,11 @@ const ListNews = (props) => {
                     Fusce finibus lobortis sem eget mattis. 
                     Suspendisse a nulla ante. Vestibulum nec 
                     placerat velit</p>
-                <p>Pays :  France</p>
-                <p>Site :  www.google.com</p>
+                <p className="news-country">France</p>
+                <p className="news-site">www.google.com</p>
             </div>
-        </div>
+            <h2>Nom de la News</h2>
+        </div> */}
         </>
     )
 };

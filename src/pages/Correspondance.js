@@ -1,45 +1,75 @@
 import React, { useEffect, useState } from 'react';
+import World from '../images/world.png';
+import ImageNews from '../images/news.png';
+import BookNews from '../images/book.png';
 // import Countries from '../components/Countries';
 // import News from '../components/News';
 // import ListCountries from '../components/ListCountries';
 
 const Correspondance = () => {
-    let [data, setData] = useState([]);
+    let [countries, setCountries] = useState([]);
     let [news, setNews] = useState([]);
+    let [newslanguage, setNewsLanguage] = useState([]);
+    let [countrylanguage, setCountryLanguage] = useState([]);
     const [once, setOnce] = useState(true);
     let randomNumber = Math.floor(Math.random() * 100);
+    // let stringNews = newslanguage.toString();
+    let stringLanguage = countrylanguage.toString();
+    // let CorrectFlag = toString(news.languages[0].iso639_1);
+    // let CorrectFlag = toString(news.language);
+    // let correspondanceNews = news.country;
     // const { country } = props;
     // const { ListCountries } = props;
     // console.log(country);
 
     useEffect(() => {
         if(once) {
-        fetch("https://restcountries.eu/rest/v2/all?fields=name;population;region;capital;flag")
+            fetch("https://newsapi.org/v2/sources?apiKey=8fa89dcad1fb46118e537fcd03608ebf")
+            .then(res => res.json())
+            .then((res) => {
+                // setNewsLanguage(res.sources)
+                setNews(res.sources[randomNumber])
+            // .then((res) => console.log(res.sources[randomNumber].language))
+                // console.log(stringLanguage)
+            setOnce(false);
+            },)
+        }
+    })
+
+
+    useEffect(() => {
+        if(once) {
+        fetch('https://restcountries.eu/rest/v2')
         .then(res => res.json())
-        .then((res) => setData(res[randomNumber]));
-        // console.log(data);
+        .then((res) => {
+            setCountries(res[randomNumber])
+            // setCountryLanguage(res[randomNumber].alpha2Code)
+            // console.log(res[randomNumber])
+        })
+        // .then(res => console.log('https://restcountries.eu/rest/v2/lang/' + stringNews))
+        // .then((res) => setCountries(res));
+        // .then(res => console.log(res.randomNumber.languages[0]));
+        // .then(res => console.log(res[randomNumber]))
+        // .then(res => console.log(CorrectFlag));
         setOnce(false);
         }
     })
 
 
-    // useEffect(() => {
-    //     if(once) {
-    //         fetch("https://newsapi.org/v2/sources?apiKey=c779b69affed4efe94a1e48ab6479c62")
-    //         .then(res => res.json())
-    //         // .then(res => console.log(res.sources));
-    //         .then((res) => setNews(res.sources[randomNumber]));
-    //         // console.log(news);
-    //         setOnce(false);
-    //     }
-    // })
+    
 
     return (
         <>
-            <h1>Page Correspondance des deux APIs</h1>
-            <ul>
-                <p>Faire la Correspondance des Pays et des News</p>
-            </ul>
+            <div className="images-correspondance">
+                <img src={ImageNews} className="news-correspondance" alt="news"/>
+                <h1>Correspondance</h1>
+                <img src={World} className="world-correspondance" alt="world"/>
+            </div>
+
+            
+
+            <div className="container-correspondance">
+
 
             {/* <div key={news.name} className="correspondance-news">
                 <li>Nom : {news.name}</li>
@@ -47,30 +77,28 @@ const Correspondance = () => {
                 <li>Pays :  {news.country}</li>
                 <li>Site :  {news.url}</li>
             </div> */}
+                <div className="data-news-correspondance" key={news.name}>
+                    <h2>{news.name}</h2>
+                    <div className="data-news-details">
+                        <p className="news-description">{news.description}</p>
+                        <p className="news-country">Pays : {news.country}</p>
+                        <p className="news-site">{news.url}</p>
+                        <a href={news.url} className="news-link" target="_blank" name="link"><img src={BookNews} name="link" className="news-url-image" alt="news-url"/></a>
+                    </div>
+                </div>
 
-            <div className="correspondance-news">
-                <li>Nom : Nom de la news</li>
-                <li>Description : Mauris consectetur 
-                    est vitae massa venenatis faucibus. 
-                    Praesent congue pulvinar felis in blandit. 
-                    Integer felis lectus, accumsan sed orci quis, 
-                    gravida tincidunt ante. Quisque mattis lacus et 
-                    ligula gravida, ut venenatis tortor consequat. 
-                    Fusce finibus lobortis sem eget mattis. 
-                    Suspendisse a nulla ante. Vestibulum nec 
-                    placerat velit</li>
-                <li>Pays :  France</li>
-                <li>Site :  www.google.com</li>
+
+                <div key={countries.name} className="correspondance-countries">
+                    <img src={countries.flag} alt="flag" />
+                    <p>Pays : {countries.name}</p>
+                    <p>Capital : {countries.capital}</p>
+                    <p>Pop. {countries.population}</p>
+                    {/* <li>Langue : {countries.langagues[0]}</li> */}
+                </div>
+
+                
+
             </div>
-
-
-            <div key={data.name} className="correspondance-countries">
-                <img src={data.flag} alt="flag" />
-                <li>Pays : {data.name}</li>
-                <li>Capital : {data.capital}</li>
-                <li>Pop. {data.population}</li>
-            </div>
-
 
             {/* <ul>
                 {data.map((country) => (
@@ -85,7 +113,7 @@ const Correspondance = () => {
                 ))}
             </ul> */}
         </>
-            // {/* <div className="data-countries-container">
+            // {/* // <div className="data-countries-container">
             //     <ul>
             //         <img src={data.flag} alt="flag" />
             //         <li>Pays : {data.name}</li>

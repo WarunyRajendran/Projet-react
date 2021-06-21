@@ -4,14 +4,14 @@ import ListCountries from './ListCountries';
 // import Correspondance from '../pages/Correspondance';
 
 const Countries = () => {
-    let [data, setData] = useState([]);
+    let [countries, setCountries] = useState([]);
 
 
     useEffect(() => {
-        fetch("https://restcountries.eu/rest/v2/all?fields=name;population;region;capital;flag")
+        fetch("https://restcountries.eu/rest/v2")
         .then(res => res.json())
         // .then(res => console.log(res));
-        .then((res) => setData(res));
+        .then((res) => setCountries(res));
         // console.log(data);
     })
 
@@ -33,7 +33,7 @@ const Countries = () => {
         <>
             <h1>Les drapeaux</h1>
             <div className="data-countries-container">
-                {data.map((country) => (
+                {countries.map((country) => (
                     <ListCountries country={country} key={country.name}/>
                     // <li key={country.name}>{country.name}</li>
                 ))}

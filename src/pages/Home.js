@@ -1,41 +1,66 @@
 import React from 'react';
+import ImageNews from '../images/news.png';
+import World from '../images/world.png';
 
 const Home = () => {
     return (
         <>
-            <h1>Page d'accueil</h1>
-            <p>Les deux APIs utilisées sont :
-                <ul>
-                    <li>API Restcountries</li>
-                    <li>API News</li>
-                </ul>
-            </p>
+            <h1>Accueil</h1>
+            <div className="home-presentation">
+                <p className="title-presentation">Pour ce projet react, j'ai décidé d'utiliser les deux APIs suivantes.</p>        
+                <div className="les-apis">
+                    <div className="presentation-api-countries">
+                        {/* <img src={World} alt="news"></img> */}
+                        {/* <div className="detail-api"> */}
+                            <h2>REST Countries</h2>   
+                        {/* </div> */}
+                        <p>Cette api va retourner tous les drapeaux du monde. Cette api ne necéssite pas de clé api. Il existe plusieurs urls pour filtrer nos requêtes.
+                            Il est possible d'afficher les drapeaux en fonction de la langue, du continent, de la capital, etc. 
+                            Dans ce projet, cette api est divisée en 3 parties. 
+                        </p>
+                        <ul>
+                            <li>En première partie, la page "Countries" va nous afficher la liste de tous les drapeaux.</li>
+                        </ul>
+                        
+                        <p>Dans les deux parties suivantes, l'url est filtré en fonction de ce que l'on souhaite retourner.</p>
+                        <ul>
+                            <li>En deuxième partie, la page "Pays d'Amérique" va uniquement retourner les pays d'Amérique.</li>
+                            <li>En troisième partie, la page "Pays selon la langue", va afficher les pays selon la langue choisit. Ici, l'anglais.</li>
+                        </ul>
+                        <button><a href="https://restcountries.eu/" target="blank">Documentation REST Countries</a></button>
+                    </div>
+                
+                    <div className="presentation-api-news">
+                        {/* <img src={ImageNews} alt="news"></img> */}
+                        {/* <div className="detail-api"> */}
+                            <h2>NewsAPI</h2>
+                        {/* </div> */}
+                        <p>Cette api va afficher toutes les news du monde provenant de différentes sources. Celle-ci necéssite une clé api. 
+                            Pour cela, il faut s'enregistrer pour ensuite accéder aux ressources. Cependant, le nombre de requête
+                            est limité à 100 requêtes par jour. 
+                            Il est possible de filtrer les demandes. Nous pouvons retourner les news d'un sujet précis (ex: le bitcoin), 
+                            les grands titres d'un pays, etc.
+                            Dans ce projet, cette api est divisée en 3 parties.
+                        </p>
+                        <ul>
+                            <li>En première partie, la page "News", va afficher la liste de toutes les news du monde 
+                            provenant de toutes les sources.</li>
+                        </ul>    
+                        <p>Dans les deux parties suivantes, l'url est filtré en fonction de ce que l'on souhaite retourner.</p>
+                        <ul>
+                            <li>En deuxième partie, la page "Grands titre aux USA", va afficher les meilleurs news des USA.</li>
+                            <li>En troisème partie, la page "Business News" retourne les news de la catégorie business.</li>
+                        </ul>
+                        <button><a href="https://newsapi.org/" target="blank">Documentation NewsAPI</a></button>
+                    </div>
+                </div>
 
-                <h2>API Restcountries</h2>
-                <p>Duis vitae rhoncus risus. Quisque blandit pharetra semper. 
-                Integer consequat, nunc vitae ullamcorper pellentesque, nibh lectus
-                bibendum mauris, ut faucibus augue velit efficitur massa.
-                Pellentesque habitant morbi tristique senectus et netus et malesuada
-                fames ac turpis egestas. Nulla et dignissim sem, non faucibus magna.
-                Nunc commodo finibus libero. Suspendisse mi nisl, pulvinar vulputate
-                lacus eget, placerat blandit velit. Sed at augue vehicula, blandit sem ac, 
-                pulvinar sapien. Suspendisse maximus consectetur quam. Quisque sed dui maximus, 
-                pellentesque arcu vel, facilisis eros. Praesent et tristique leo, ut fermentum 
-                urna. Morbi ac hendrerit purus. Interdum et malesuada fames ac ante ipsum primis 
-                in faucibus. Duis venenatis consectetur purus, ac pellentesque eros egestas ut. 
-                Duis egestas lectus quam, vitae congue metus cursus eu.</p>
-            
-                <h2>API News</h2>
-                <p>Ut at magna imperdiet, vulputate ante vitae, egestas enim. Nulla sed arcu 
-                tristique, pellentesque est quis, imperdiet purus. Mauris sit amet purus arcu. 
-                Sed sodales porttitor scelerisque. Etiam in orci laoreet, bibendum erat eu, 
-                facilisis libero. Curabitur et porttitor mi. Praesent in sem condimentum ante 
-                sollicitudin aliquet ac a erat. Vestibulum lobortis semper justo quis rhoncus. 
-                Pellentesque in hendrerit lorem. Etiam eget rhoncus metus. Integer aliquet, sem 
-                ut porttitor faucibus, enim dui faucibus risus, nec sollicitudin nisi lacus in 
-                erat. Vivamus a felis sit amet orci posuere tincidunt. Praesent interdum nec nisi 
-                non suscipit. In ut nisl odio. Vivamus id vulputate risus, eget sollicitudin neque. 
-                Etiam ornare tristique sapien, ut tempus urna pharetra eget.</p>
+                {/* <div className="presentation-correspondance">
+                    <h2>Correspondance</h2>
+                    <p>Une fois utilisé les APIs séparement, il serait temps de les faire correspondre. La page "Correspondance"
+                    va retourner une news aléatoirement et afficher son pays de source.</p>
+                </div> */}
+            </div>
         </>
     );
 };
