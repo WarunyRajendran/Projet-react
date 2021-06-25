@@ -6,42 +6,47 @@ import BookNews from '../images/book.png';
 const Correspondance = () => {
     let [countries, setCountries] = useState([]);
     let [news, setNews] = useState([]);
-    // let [newslanguage, setNewsLanguage] = useState([]);
+    let [data, setData] = useState([]);
     // let [countrylanguage, setCountryLanguage] = useState([]);
     const [once, setOnce] = useState(true);
     let randomNumber = Math.floor(Math.random() * 100);
-    // let stringNews = newslanguage.toString();
-    // let stringLanguage = countrylanguage.toString();
+    let stringLanguage = data.toString();
 
     useEffect(() => {
         if(once) {
-            fetch("https://newsapi.org/v2/sources?apiKey=f057713f0efa4151a7a41b9b1af2022e")
+            fetch(`https://newsapi.org/v2/sources?apiKey=f057713f0efa4151a7a41b9b1af2022e`)
             .then(res => res.json())
             .then((res) => {
-                // setNewsLanguage(res.sources)
+                setData(res.sources[randomNumber].language)
                 setNews(res.sources[randomNumber])
+                // console.log(stringNews)
             // .then((res) => console.log(res.sources[randomNumber].language))
-                // console.log(stringLanguage)
+                // console.log(res.sources[randomNumber].language)
+            })
             setOnce(false);
-            },)
         }
     })
 
 
     useEffect(() => {
+        // console.log(stringNews)
+        // let stringNews;
+        // console.log(stringNews)
+        // console.log(data)
+        let stringLanguage = "en"
+        // console.log(stringLanguage)
         if(once) {
-        fetch('https://restcountries.eu/rest/v2')
+        fetch(`https://restcountries.eu/rest/v2/lang/${stringLanguage}`)
         .then(res => res.json())
         .then((res) => {
             setCountries(res[randomNumber])
+            // console.log(countries)
+            // console.log(res[randomNumber])
+            // console.log(stringNews)
+            // console.log(`https://restcountries.eu/rest/v2/lang/${stringLanguage}`)
             // setCountryLanguage(res[randomNumber].alpha2Code)
             // console.log(res[randomNumber])
         })
-        // .then(res => console.log('https://restcountries.eu/rest/v2/lang/' + stringNews))
-        // .then((res) => setCountries(res));
-        // .then(res => console.log(res.randomNumber.languages[0]));
-        // .then(res => console.log(res[randomNumber]))
-        // .then(res => console.log(CorrectFlag));
         setOnce(false);
         }
     })

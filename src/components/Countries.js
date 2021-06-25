@@ -6,7 +6,7 @@ const Countries = () => {
 
 
     useEffect(() => {
-        fetch("https://restcountries.eu/rest/v2")
+        fetch(`https://restcountries.eu/rest/v2`)
         .then(res => res.json())
         // .then(res => console.log(res));
         .then((res) => setCountries(res));

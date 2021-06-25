@@ -6,7 +6,7 @@ const News = () => {
     let [news, setNews] = useState([]);
 
     useEffect(() => {
-        fetch("https://newsapi.org/v2/sources?apiKey=f057713f0efa4151a7a41b9b1af2022e")
+        fetch(`https://newsapi.org/v2/sources?apiKey=f057713f0efa4151a7a41b9b1af2022e`)
         .then(res => res.json())
         // .then(res => console.log(res.sources));
         .then((res) => setNews(res.sources));

@@ -4,7 +4,7 @@ const LanguageCountries = () => {
     let [language, setLanguage] = useState([]);
     
     useEffect(() => {
-        fetch("https://restcountries.eu/rest/v2/lang/en")
+        fetch(`https://restcountries.eu/rest/v2/lang/en`)
         .then(res => res.json())
         .then((res) => setLanguage(res));
     })

@@ -4,7 +4,7 @@ const RegionCountries = () => {
     let [region, setRegion] = useState([]);
     
     useEffect(() => {
-        fetch("https://restcountries.eu/rest/v2/region/americas")
+        fetch(`https://restcountries.eu/rest/v2/region/americas`)
         .then(res => res.json())
         .then((res) => setRegion(res));
     })
