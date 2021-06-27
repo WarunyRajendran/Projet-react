@@ -7,7 +7,6 @@ const Correspondance = () => {
     let [countries, setCountries] = useState([]);
     let [news, setNews] = useState([]);
     let [data, setData] = useState([]);
-    // let [countrylanguage, setCountryLanguage] = useState([]);
     const [once, setOnce] = useState(true);
     let randomNumber = Math.floor(Math.random() * 100);
     let stringLanguage = data.toString();
@@ -19,9 +18,6 @@ const Correspondance = () => {
             .then((res) => {
                 setData(res.sources[randomNumber].language)
                 setNews(res.sources[randomNumber])
-                // console.log(stringNews)
-            // .then((res) => console.log(res.sources[randomNumber].language))
-                // console.log(res.sources[randomNumber].language)
             })
             setOnce(false);
         }
@@ -29,23 +25,12 @@ const Correspondance = () => {
 
 
     useEffect(() => {
-        // console.log(stringNews)
-        // let stringNews;
-        // console.log(stringNews)
-        // console.log(data)
         let stringLanguage = "en"
-        // console.log(stringLanguage)
         if(once) {
         fetch(`https://restcountries.eu/rest/v2/lang/${stringLanguage}`)
         .then(res => res.json())
         .then((res) => {
             setCountries(res[randomNumber])
-            // console.log(countries)
-            // console.log(res[randomNumber])
-            // console.log(stringNews)
-            // console.log(`https://restcountries.eu/rest/v2/lang/${stringLanguage}`)
-            // setCountryLanguage(res[randomNumber].alpha2Code)
-            // console.log(res[randomNumber])
         })
         setOnce(false);
         }
@@ -82,7 +67,6 @@ const Correspondance = () => {
                     <p>Pays : {countries.name}</p>
                     <p>Capital : {countries.capital}</p>
                     <p>Pop. {countries.population}</p>
-                    {/* <li>Langue : {countries.langagues[0]}</li> */}
                 </div>
 
                 
